@@ -2,7 +2,7 @@
 ![PrusaSlicer logo](/resources/icons/PrusaSlicer.png?raw=true)
 
 # PrusaSlicer
-
+  
 You may want to check the [PrusaSlicer project page](https://www.prusa3d.com/prusaslicer/).
 Prebuilt Windows, OSX and Linux binaries are available through the [git releases page](https://github.com/prusa3d/PrusaSlicer/releases) or from the [Prusa3D downloads page](https://www.prusa3d.com/drivers/).
 
