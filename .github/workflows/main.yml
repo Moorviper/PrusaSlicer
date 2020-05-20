@@ -31,7 +31,6 @@ jobs:
         cd build
         cmake ..
         make
-        make install
         pwd
         cd ..
         mkdir build
