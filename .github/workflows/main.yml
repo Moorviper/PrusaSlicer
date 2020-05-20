@@ -26,7 +26,7 @@ jobs:
     - name: Run a multi-line script
       run: |
         wget https://distfiles.macports.org/MacPorts/MacPorts-2.6.2-10.15-Catalina.pkg
-        sudo installer -pkg ./MacPorts-2.6.2-10.15-Catalina.pkg -target /
+        sudo installer -pkg ./MacPorts-2.6.2-10.15-Catalina.pkg
         port install build-essential git cmake pkg-config libbz2 libxml2 libzip boost lua tbb
         mkdir build
         cd build
