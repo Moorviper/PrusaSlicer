@@ -31,10 +31,11 @@ jobs:
         cd build
         cmake ..
         make
+        echo "--------------- deps finished ------------------------"
         pwd
         cd ..
         cd ..
         mkdir build
         cd build
-        cmake ..
+        cmake .. -DCMAKE_PREFIX_PATH="$PWD/../deps/build/destdir/usr/local"        
         make
