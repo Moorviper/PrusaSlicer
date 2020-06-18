@@ -32,6 +32,9 @@ jobs:
         cmake ..
         make
         echo "--------------- deps finished ------------------------"
+        echo "--------------- deps finished ------------------------"
+        echo "--------------- deps finished ------------------------"
+        echo "--------------- deps finished ------------------------"
         pwd
         cd ..
         cd ..
@@ -39,3 +42,7 @@ jobs:
         cd build
         cmake .. -DCMAKE_PREFIX_PATH="$PWD/../deps/build/destdir/usr/local"        
         make
+        echo "--------------- build finished ------------------------"
+        echo "--------------- build finished ------------------------"
+        echo "--------------- build finished ------------------------"
+        echo "--------------- build finished ------------------------"
