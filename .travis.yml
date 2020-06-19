@@ -1,0 +1,32 @@
+branches:
+  only:
+    - master
+os: osx
+osx_image: xcode10.1
+language: "bash"
+sudo: false
+before_install:
+install:
+  - brew install cmake git gettext
+script:
+  - mkdir build
+  - cd build
+  - cmake ..
+  - make
+  - cd ..
+  - mkdir build
+  - cd build
+  - cmake .. -DCMAKE_PREFIX_PATH="$PWD/../deps/build/destdir/usr/local"
+  - make
+  - echo "============================"
+  - ls
+  - echo "============================"
+  - ls -la
+deploy:
+  provider: releases
+  api_key:
+    secure: RNxf4aKGTWbvSdGHYsDPBc1Z1r8VOcVlnnZ71cz0dEuD2OU8Ox1vMnElbRUHAdcg2124grWSaldw0I5nS2a69k8rt5DkW2Sk1g9UW00Jnm1qYTjihdKoQ8LGpQsuQB8P7JHG9R09rDbWFZ250ZnWCNDf60ELWTx7Rk5Cb8tAkPeztbojcu0rZ8hyF6dBWG2yMoJdDoO4fP6F4QK4gWwCifKxsErhmjs7mZ5cmi0wcllPguGfZoMcnNpPAhXjC8Jzm5NsDzhAUR7iCZZGLyilcIwWpJdQ4IR8aUV8T2ClLrOFY5Y7kiqn12k1UbYBM4h2lU9GaxZ5uhPA7UAx31XCowVgdzWUuAs0oMwV/8D9kT7Xx7CkE+G3mmqayb+t7pHKflyYL+FkgUiFF6XNNyErntSYTMQUxhfMuWmNm7vsB5Z19DtnxS+SVegLonVBKyMQxsIylKfmLPdZKOcR3O5sCMjTlDmB6tgrJdSYnmSvfKdtCtlcO3pXkXwjwRIkaf8oaWMAf2mDLRRSUbOX+xiRL0uU4svWEP1H4kUeJf/GIz5hAh3RYgeyV2v0MI/Tyu9Jr0nZSToupUWB/2qGNGU5Fit/UUmcfqwzsh5RYA+/7LPQvqAZquregAgnJ6uJrJW7+rS2q2dboxAT4BP9AHUqpklyiR7VwiQmYcIZq3PCN7U=
+  file: prusaslicer.zip
+  on:
+    repo: Moorviper/PrusaSlicer
+  skip_cleanup: 'true'
