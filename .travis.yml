@@ -7,7 +7,7 @@ language: "bash"
 sudo: false
 before_install:
 install:
-  - brew install gettext tbb Cereal nlopt
+  - brew install gettext
 script:
   - mkdir build
   - cd build
