@@ -9,10 +9,12 @@ before_install:
 install:
   - brew install boost gettext 
 script:
+  - cd deps
   - mkdir build
   - cd build
   - cmake ..
   - make
+  - cd ..
   - cd ..
   - mkdir build
   - cd build
