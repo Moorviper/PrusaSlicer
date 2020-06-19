@@ -7,7 +7,7 @@ language: "sh"
 sudo: false
 before_install:
 install:
-  - brew install boost gettext 
+  - brew install boost gettext watch
 script:
   - cd deps
   - mkdir build
