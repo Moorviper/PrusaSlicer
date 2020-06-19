@@ -7,14 +7,13 @@ language: "sh"
 sudo: false
 before_install:
 install:
-  - brew install boost gettext watch
+  - brew install boost gettext
 script:
   - cd deps
   - mkdir build
   - cd build
-  - watch -n 300 echo "KEEP ALIVE !!" &
   - cmake ..
-  - travis_wait 20 make -k > build.log 2>&1
+  - make
   - cd ..
   - cd ..
   - mkdir build
