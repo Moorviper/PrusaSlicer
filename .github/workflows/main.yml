@@ -37,7 +37,7 @@ jobs:
         cd ..
         mkdir build
         cd build
-        cmake .. -DCMAKE_PREFIX_PATH="$PWD/../deps/build/destdir/usr/local"        
+        cmake .. -DCMAKE_PREFIX_PATH="$PWD/../deps/build/destdir/usr/local" -DCMAKE_BUILD_TYPE=Release       
         make
         echo "--------------- build finished ------------------------"
         ls
