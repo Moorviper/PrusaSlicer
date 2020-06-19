@@ -7,7 +7,7 @@ language: "bash"
 sudo: false
 before_install:
 install:
-  - brew install cmake gettext
+  - brew install gettext
 script:
   - mkdir build
   - cd build
