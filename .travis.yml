@@ -7,7 +7,7 @@ language: "bash"
 sudo: false
 before_install:
 install:
-  - brew install gettext tbb
+  - brew install gettext tbb Cereal nlopt openvdb
 script:
   - mkdir build
   - cd build
