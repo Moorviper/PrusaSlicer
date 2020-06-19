@@ -2,11 +2,12 @@ branches:
   only:
     - master
 os: osx
-osx_image: xcode8
-language: "bash"
+osx_image: xcode11.6
+language: "sh"
 sudo: false
 before_install:
 install:
+  - brew install gettext 
 script:
   - mkdir build
   - cd build
