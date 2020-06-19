@@ -7,7 +7,7 @@ language: "sh"
 sudo: false
 before_install:
 install:
-  - brew install gettext 
+  - brew install boost gettext 
 script:
   - mkdir build
   - cd build
