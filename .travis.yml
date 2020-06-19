@@ -16,7 +16,7 @@ script:
   - cd ..
   - mkdir build
   - cd build
-  - cmake .. -DCMAKE_PREFIX_PATH="$PWD/../deps/build/destdir/usr/local" -DTBB_LIBRARIES=/usr/include/tbb
+  - cmake .. -DCMAKE_PREFIX_PATH="$PWD/../deps/build/destdir/usr/local"
   - make
   - echo "============================"
   - ls
