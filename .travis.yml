@@ -12,6 +12,7 @@ script:
   - cd deps
   - mkdir build
   - cd build
+  - watch -n 300 echo "KEEP ALIVE !!" &
   - cmake ..
   - travis_wait 20 make -k > build.log 2>&1
   - cd ..
