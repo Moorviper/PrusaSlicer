@@ -25,7 +25,7 @@ script:
   - echo " tar cfvj deps.tar.bz2 *.pdf"
   - echo ""
   - echo "=============================================";
-  - tar cfvj deps.tar.bz2 deps/
+  - tar cfvj deps.tar.bz2 deps/ &>/dev/null
 deploy:
   provider: releases
   api_key:
