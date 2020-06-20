@@ -11,6 +11,7 @@ cache:
 before_install:
 install:
   - brew install boost gettext
+  - pip install travis-wait-improved
 script:
   - cd deps
   - mkdir build
@@ -25,6 +26,7 @@ script:
   - echo " tar cfvj deps.tar.bz2 *.pdf"
   - echo ""
   - echo "=============================================";
+  - travis-wait-improved --timeout 9m packer build packer.json
   - tar cfvj deps.tar.bz2 deps/ &>/dev/null
 deploy:
   provider: releases
