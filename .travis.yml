@@ -5,6 +5,9 @@ os: osx
 osx_image: xcode11.6
 language: "sh"
 sudo: false
+cache:
+  directories:
+  - $HOME/deps/
 before_install:
 install:
   - brew install boost gettext
