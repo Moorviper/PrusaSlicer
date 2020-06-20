@@ -21,7 +21,7 @@ script:
   - cd ..
   - echo "=============================================";
   - echo ""
-  - echo " compressing dep files:"
+  - echo " compressing dep files ..."
   - echo " tar cfvj deps.tar.bz2 *.pdf"
   - echo ""
   - echo "=============================================";
