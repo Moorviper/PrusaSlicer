@@ -18,6 +18,7 @@ script:
   - cmake ..
   - make
   - cd ..
+  - echo "============================== hopefully cached. ==================================="
   - cd ..
   - mkdir build
   - cd build
