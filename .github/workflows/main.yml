@@ -41,9 +41,9 @@ jobs:
     - name: cmake
       working-directory: ./build
       run: cmake .. -DCMAKE_PREFIX_PATH="$PWD/../deps/build/destdir/usr/local" -DCMAKE_OSX_DEPLOYMENT_TARGET="10.13" -DSLIC3R_STATIC=1
-    - name: make slic3r
+    - name: make
       working-directory: ./build
-      run: make slic3r
+      run: make
     - name: update Info.plist
       working-directory: ./build/src
       run: sed "s/+UNKNOWN/_$(date '+%F')/" Info.plist >Info.date.plist
