@@ -60,7 +60,7 @@ jobs:
       working-directory: ./build
       run: |
         cp -Rf ../resources PrusaSlicer/PrusaSlicer.app/Contents/resources
-        cp PrusaSlicer/PrusaSlicer.app/Contents/resources/icons/slic3r.icns PrusaSlicer/PrusaSlicer.app/Contents/resources/Slic3r.icns
+        cp PrusaSlicer/PrusaSlicer.app/Contents/resources/icons/PrusaSlicer.icns PrusaSlicer/PrusaSlicer.app/Contents/resources/PrusaSlicer.icns
         cp src/Info.date.plist PrusaSlicer/PrusaSlicer.app/Contents/Info.plist
         echo -n -e 'APPL????\x0a' > PkgInfo
         cp PkgInfo PrusaSlicer/PrusaSlicer.app/Contents/PkgInfo
