@@ -3,12 +3,12 @@ name: C/C++ CI macos
 on:
   push:
     branches:
-      - CI
+      - master
 
 jobs:
   build:
 
-    runs-on: master
+    runs-on: macos-latest
     
     steps:
     - uses: actions/checkout@v2
