@@ -68,6 +68,14 @@ jobs:
     - name: copy bin and do not let it lower case
       working-directory: ./build
       run: |
+        ls -la
+        echo "--------------------------------------------"
+        ls -la src
+        echo "--------------------------------------------"
+        ls -la src/PrusaSlicer
+    - name: copy bin and do not let it lower case
+      working-directory: ./build
+      run: |
         cp -f src/PrusaSlicer PrusaSlicer/PrusaSlicer.app/Contents/MacOS/PrusaSlicer
         chmod u+x PrusaSlicer/PrusaSlicer.app/Contents/MacOS/PrusaSlicer
         tar -cvf PrusaSlicer.tar PrusaSlicer
